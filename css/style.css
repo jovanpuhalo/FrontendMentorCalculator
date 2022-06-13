@@ -33,7 +33,7 @@ body {
 .calculator {
   width: 50vw;
   height: 30vw;
-  min-height: 50rem;
+  min-height: 55rem;
   background-color: white;
   border-radius: 2rem;
   padding: 4rem;
@@ -167,7 +167,7 @@ body {
     grid-column: 1/-1;
     align-self: end; }
   .grid-tips__box {
-    max-width: 10rem;
+    max-width: 12rem;
     max-height: 6rem;
     background-color: #00494d;
     color: white;
@@ -194,7 +194,7 @@ body {
     text-align: right;
     cursor: pointer;
     width: 100%;
-    max-width: 10rem;
+    max-width: 12rem;
     max-height: 6rem;
     background-color: rgba(127, 156, 159, 0.3);
     border: 3px solid transparent;
