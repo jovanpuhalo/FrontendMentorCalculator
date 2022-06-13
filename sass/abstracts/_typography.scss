@@ -1,0 +1,17 @@
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+}
+.heading-primary {
+  &--main {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-dark-grayish-cyan;
+    margin-bottom: 1rem;
+    display: block;
+  }
+}
+.error {
+  color: $color-orange;
+  text-align: end;
+}

@@ -1,0 +1,28 @@
+.calculator {
+  width: 50vw;
+  height: 30vw;
+  min-height: 50rem;
+  background-color: $color-white;
+  border-radius: 2rem;
+  padding: 4rem;
+
+  //   border: 2px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  gap: 2rem;
+  transition: all 0.2s ease;
+
+  @media only screen and (max-width: $bp-small) {
+    gap: 1rem;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+  }
+  @media only screen and (max-width: $bp-mobile) {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, min-content);
+    gap: 2rem;
+    height: fit-content;
+    width: 80%;
+  }
+}

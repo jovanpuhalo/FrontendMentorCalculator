@@ -1,0 +1,88 @@
+.calculator__results {
+  grid-column: 2/3;
+  grid-row: 1/-1;
+  // border: 1px solid black;
+  border-radius: 2rem;
+  background-color: $color-dark-cian;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 5rem;
+  transition: all 0.2s ease;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+  }
+  @media only screen and (max-width: $bp-mobile) {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    padding: 2rem 5rem;
+  }
+
+  &__tip-amount,
+  &__total {
+    // height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    transition: all 0.3s ease;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.5rem;
+      flex-direction: column;
+      align-items: start;
+      padding: 2rem;
+      margin-bottom: 0;
+    }
+    @media only screen and (max-width: $bp-mobile) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__btn {
+    margin-top: auto; // ovaj za guranje elemnta ka dole
+    margin-left: auto; // ova dva za centriranje
+    margin-right: auto;
+    background-color: hsl(183, 100%, 28%);
+    border: none;
+    border-radius: 10px;
+    width: 85%;
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: $color-dark-cian;
+
+    &:active {
+      background-color: hsl(183, 99%, 39%);
+    }
+  }
+}
+
+.tip-amount,
+.total {
+  &__label {
+    color: $color-white;
+    display: block;
+  }
+  &__label + span {
+    color: hsl(183, 88%, 22%);
+    display: block;
+  }
+}
+.results {
+  color: $color-lighter-cian;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  transition: all 0.2s ease;
+
+  // @media only screen and (max-width: $bp-small) {
+  //   font-size: 2rem;
+  // }
+  @media only screen and (max-width: $bp-mobile) {
+    font-size: 4rem;
+  }
+}

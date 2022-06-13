@@ -1,0 +1,27 @@
+.calculator__bill {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  // border: 1px solid black;
+  // padding: 1rem;
+  // align-self: center;
+  display: flex;
+  &__icon {
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: rgba($color-dark-cian, 0.4);
+    position: absolute;
+    //   top: 8.5rem;
+    left: 20px;
+    text-align: center;
+    transition: all 0.2s ease;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 3rem;
+      width: 3rem;
+    }
+    @media only screen and (max-width: $bp-mobile) {
+      height: 4rem;
+      width: 4rem;
+    }
+  }
+}

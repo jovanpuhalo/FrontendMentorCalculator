@@ -1,0 +1,312 @@
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 400; }
+
+.heading-primary--main {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5e7a7d;
+  margin-bottom: 1rem;
+  display: block; }
+
+.error {
+  color: #ad5e04;
+  text-align: end; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 2.5rem !important; }
+
+.u-padding-small {
+  padding: 1rem !important; }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #7f9c9f;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.calculator {
+  width: 50vw;
+  height: 30vw;
+  min-height: 50rem;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  gap: 2rem;
+  transition: all 0.2s ease; }
+  @media only screen and (max-width: 56.25em) {
+    .calculator {
+      gap: 1rem;
+      padding: 1.5rem;
+      transition: all 0.2s ease; } }
+  @media only screen and (max-width: 43.75em) {
+    .calculator {
+      grid-template-columns: auto;
+      grid-template-rows: repeat(5, min-content);
+      gap: 2rem;
+      height: fit-content;
+      width: 80%; } }
+
+.calculator__bill {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex; }
+  .calculator__bill__icon {
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: rgba(0, 73, 77, 0.4);
+    position: absolute;
+    left: 20px;
+    text-align: center;
+    transition: all 0.2s ease; }
+    @media only screen and (max-width: 68.75em) {
+      .calculator__bill__icon {
+        height: 3rem;
+        width: 3rem; } }
+    @media only screen and (max-width: 43.75em) {
+      .calculator__bill__icon {
+        height: 4rem;
+        width: 4rem; } }
+
+.calculator__peoples {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  display: flex; }
+
+.calculator__results {
+  grid-column: 2/3;
+  grid-row: 1/-1;
+  border-radius: 2rem;
+  background-color: #00494d;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 5rem;
+  transition: all 0.2s ease; }
+  @media only screen and (max-width: 68.75em) {
+    .calculator__results {
+      padding: 2rem; } }
+  @media only screen and (max-width: 43.75em) {
+    .calculator__results {
+      grid-row: 4/5;
+      grid-column: 1/2;
+      padding: 2rem 5rem; } }
+  .calculator__results__tip-amount, .calculator__results__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    transition: all 0.3s ease; }
+    @media only screen and (max-width: 56.25em) {
+      .calculator__results__tip-amount, .calculator__results__total {
+        font-size: 1.5rem;
+        flex-direction: column;
+        align-items: start;
+        padding: 2rem;
+        margin-bottom: 0; } }
+    @media only screen and (max-width: 43.75em) {
+      .calculator__results__tip-amount, .calculator__results__total {
+        font-size: 1.8rem; } }
+  .calculator__results__btn {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #00888f;
+    border: none;
+    border-radius: 10px;
+    width: 85%;
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #00494d; }
+    .calculator__results__btn:active {
+      background-color: #01bcc6; }
+
+.tip-amount__label,
+.total__label {
+  color: white;
+  display: block; }
+
+.tip-amount__label + span,
+.total__label + span {
+  color: #076569;
+  display: block; }
+
+.results {
+  color: #42b7a8;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  transition: all 0.2s ease; }
+  @media only screen and (max-width: 43.75em) {
+    .results {
+      font-size: 4rem; } }
+
+.calculator__tip {
+  grid-column: 1/2;
+  grid-row: 2/3; }
+
+.grid-tips {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 1fr);
+  gap: 1rem; }
+  .grid-tips__span {
+    grid-column: 1/-1;
+    align-self: end; }
+  .grid-tips__box {
+    max-width: 10rem;
+    max-height: 6rem;
+    background-color: #00494d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    cursor: pointer; }
+    .grid-tips__box:hover, .grid-tips__box:active {
+      background-color: rgba(66, 183, 168, 0.6);
+      color: #00494d; }
+    .grid-tips__box:active {
+      transform: translateY(1px);
+      transition: all 0.2s ease; }
+      @media only screen and (max-width: 43.75em) {
+        .grid-tips__box:active {
+          background-color: #42b7a8; } }
+  .grid-tips__tip-box--6 {
+    box-sizing: border-box;
+    padding: 0.5rem !important;
+    padding-right: 1.5rem;
+    text-align: right;
+    cursor: pointer;
+    width: 100%;
+    max-width: 10rem;
+    max-height: 6rem;
+    background-color: rgba(127, 156, 159, 0.3);
+    border: 3px solid transparent;
+    border-radius: 1rem; }
+    .grid-tips__tip-box--6[value] {
+      font-family: inherit;
+      font-weight: 600;
+      color: #00494d; }
+    .grid-tips__tip-box--6::placeholder {
+      color: #5e7a7d;
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-align: left;
+      margin: 0;
+      transition: all 0.2s ease; }
+      @media only screen and (max-width: 68.75em) {
+        .grid-tips__tip-box--6::placeholder {
+          font-size: 1.3rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .grid-tips__tip-box--6::placeholder {
+          font-size: 1.2rem; } }
+      @media only screen and (max-width: 43.75em) {
+        .grid-tips__tip-box--6::placeholder {
+          font-size: 2rem; } }
+    .grid-tips__tip-box--6:focus {
+      outline: none;
+      border: 3px solid #42b7a8; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  .form__input {
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: rgba(127, 156, 159, 0.3);
+    border: 3px solid transparent;
+    border-radius: 1rem;
+    width: 100%; }
+    .form__input[value] {
+      text-align: right;
+      color: #00494d;
+      font-family: inherit;
+      font-size: 2rem;
+      font-weight: 600; }
+    .form__input:focus:invalid {
+      border: 3px solid #ad5e04; }
+    .form__input:focus:invalid + span {
+      display: block;
+      color: #ad5e04; }
+  .form__input + span {
+    display: none;
+    position: absolute;
+    bottom: -3.3rem;
+    right: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #5e7a7d;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease; }
+    @media only screen and (max-width: 950px) {
+      .form__input + span {
+        bottom: -3rem;
+        top: auto;
+        right: 0;
+        font-size: 1.5rem; } }
+  .form__input:focus, .form__input:active {
+    outline: none;
+    border: 3px solid #42b7a8;
+    border-radius: 1rem; }
+
+.flex__input__svg {
+  display: flex;
+  align-items: center;
+  position: relative; }
+
+.error-span {
+  display: none;
+  position: absolute;
+  bottom: -3.3rem;
+  right: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ad5e04;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease; }
+  @media only screen and (max-width: 950px) {
+    .error-span {
+      bottom: -3rem;
+      top: auto;
+      right: 0;
+      font-size: 1.5rem; } }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 87.5em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 45%; } }
+  @media only screen and (max-width: 43.75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Space Mono", monospace; }

@@ -1,0 +1,78 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  //
+  &__input {
+    // position: relative;
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: rgba($color-grayish-cyan, 0.3);
+    border: 3px solid transparent;
+    border-radius: 1rem;
+    width: 100%;
+
+    &[value] {
+      text-align: right;
+      color: $color-dark-cian;
+      font-family: inherit;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    &:focus:invalid {
+      border: 3px solid $color-orange;
+    }
+    &:focus:invalid + span {
+      display: block;
+      color: $color-orange;
+    }
+  }
+  &__input + span {
+    display: none;
+    position: absolute;
+    bottom: -3.3rem;
+    right: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-dark-grayish-cyan;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+
+    @media only screen and (max-width: 950px) {
+      bottom: -3rem;
+      top: auto;
+      right: 0;
+      font-size: 1.5rem;
+    }
+  }
+  &__input:focus,
+  &__input:active {
+    outline: none;
+    border: 3px solid rgb(66, 183, 168);
+    border-radius: 1rem;
+  }
+}
+
+.flex__input__svg {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.error-span {
+  display: none;
+  position: absolute;
+  bottom: -3.3rem;
+  right: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: $color-orange;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease;
+
+  @media only screen and (max-width: 950px) {
+    bottom: -3rem;
+    top: auto;
+    right: 0;
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,90 @@
+.calculator__tip {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  // border: 1px solid black;
+  // align-self: stretch;
+}
+
+.grid-tips {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 1fr);
+  // grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+  &__span {
+    grid-column: 1/-1;
+    align-self: end;
+  }
+
+  &__box {
+    max-width: 10rem;
+    max-height: 6rem;
+    background-color: $color-dark-cian;
+    color: $color-white;
+    // padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      background-color: rgba($color-lighter-cian, 0.6);
+      color: $color-dark-cian;
+    }
+    &:active {
+      transform: translateY(1px);
+      transition: all 0.2s ease;
+
+      @media only screen and (max-width: $bp-mobile) {
+        background-color: $color-lighter-cian;
+      }
+    }
+  }
+  &__tip-box--6 {
+    box-sizing: border-box;
+    padding: 0.5rem !important;
+    padding-right: 1.5rem;
+    text-align: right;
+    cursor: pointer;
+    width: 100%;
+    max-width: 10rem;
+    max-height: 6rem;
+    background-color: rgba($color-grayish-cyan, 0.3);
+    border: 3px solid transparent;
+    border-radius: 1rem;
+    &[value] {
+      font-family: inherit;
+      font-weight: 600;
+      color: $color-dark-cian;
+    }
+    &::placeholder {
+      color: $color-dark-grayish-cyan;
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-align: left;
+      margin: 0;
+      transition: all 0.2s ease;
+
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.3rem;
+      }
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.2rem;
+      }
+      @media only screen and (max-width: $bp-mobile) {
+        font-size: 2rem;
+      }
+    }
+    &:focus {
+      outline: none;
+      border: 3px solid $color-lighter-cian;
+    }
+  }
+}
