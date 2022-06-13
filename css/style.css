@@ -200,6 +200,7 @@ body {
     border: 3px solid transparent;
     border-radius: 1rem; }
     .grid-tips__tip-box--6[value] {
+      font-size: 2.1rem;
       font-family: inherit;
       font-weight: 600;
       color: #00494d; }
